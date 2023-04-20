@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Form</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <h2>Payment Gateway Form</h2>
+        <!-- <form action="" method="post"> -->
+            <!-- SOURCE AND DESTN -->
+            <div class="input_group">
+                <div class="input_box">
+                    <h4>Source :</h4>
+                    <!-- <input type="text" id="source" name="source" required> -->
+                    <select id="source" name="source">
+                        <option value="">Select Source </option>
+                        <option value="source1">Peelamedu</option>
+                        <option value="source2">Krishnammal college</option>
+                        <option value="source3">Fun mall</option>
+                        <option value="source4">Hopes</option>
+                        <option value="source5">Tidel Park</option>
+                      </select>
+                </div>
+                <div class="input_box">
+                    <h4>Destination :</h4>
+                    <select id="destination" name="destination" onchange="calculateAmount()" required>
+                        <option value="">Select Destination</option>
+                        <option value="destination1">Krishnammal college</option>
+                        <option value="destination2">Tidel Park</option>
+                        <option value="destination3">Sitra</option>
+                        <option value="destination4">KMCH</option>
+                        <option value="destination5">Neelambur</option>
+                      </select>
+                </div>
+            </div>
+            <div class="input_group">
+                <div class="input_box">
+                    <h4>Amount :</h4>
+                    <input type="text" id="amount" name="amount" readonly required>
+                    <!--<input type="text" id="source" name="source" required>-->
+                </div>
+                    <div class="input_box">
+                        <h4>phone number :</h4>
+                        <input type="text" id="phone_number"  name="phone_number"required>
+                        <!--<input type="text" id="source" name="source" required>-->
+                    </div>
+                </div>
+                <div class="input_group">
+                <div class="input_box">
+                <h4>Payment Details</h4>
+                <input type="radio" name="pay" class="radio" id="bc1" checked>
+                <label for="bc1"><span>
+                        <i class="fa fa-cc-visa"></i>Credit Card</span></label>
+                <input type="radio" name="pay" class="radio" id="bc2">
+                <label for="bc2"><span>
+                        <i class="fa fa-cc-paypal"></i>UPI</span></label>
+            
+            </div>
+            </div>        
+
+
+            <div class="input_group">
+                <div class="input_box">
+                    <button type="submit" onclick="redirectToPage()">PAY NOW</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- </form> -->
+    </div>
+
+</body>
+
+</html>
+        

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment page</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="wrapper">
+        <h2>Payment Gateway Form</h2>
+        <!-- <form action="" method="post"> -->
+            <div class="input_group">
+                <div class="input_box">
+                    <input type="tel" name="" class="name" placeholder="Card Number 1111-2222-3333-4444" required>
+                    <i class="fa fa-credit-card icon"></i>
+                </div>
+            </div>
+            <div class="input_group">
+                <div class="input_box">
+                    <input type="tel" name="" class="name" placeholder="Card CVC 632" required>
+                    <i class="fa fa-user icon"></i>
+                </div>
+            </div>
+            <div class="input_group">
+                <div class="input_box">
+                    <div class="input_box">
+                        <input type="number" placeholder="Exp Month" required class="name">
+                        <i class="fa fa-calendar icon" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="input_box">
+                    <input type="number" placeholder="Exp Year" required class="name">
+                    <i class="fa fa-calendar-o icon" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="input_box">
+                <input type="number"  required class="name">
+                <i class="fa fa-money icon" aria-hidden="true"></i>
+            </div>
+            <!--Payment Details End-->
+
+            <div class="input_group">
+                <div class="input_box">
+                    <button type="submit" id="sendOTPBtn" onclick="redirectToPage1();">PAY NOW</button>
+                </div>
+            </div>
+
+        <!-- </form> -->
+    </div>   
+</body>
+<!-- <script>
+    async function sendOTP(toNumber, otp) {
+  try {
+    const response = await fetch('/send-otp', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ toNumber, otp })
+    });
+    if (response.ok) {
+      console.log(`OTP sent successfully to ${toNumber}.`);
+    } else {
+      console.error(`Failed to send OTP: ${response.status} ${response.statusText}`);
+    }
+  } catch (error) {
+    console.error('Error sending OTP:', error);
+  }
+}
+
+// Generate a random OTP
+const generateOTP = () => {
+  const digits = '0123456789';
+  let otp = '';
+  for (let i = 0; i < 6; i++) {
+    otp += digits[Math.floor(Math.random() * digits.length)];
+  }
+  console.log(otp)
+  return otp;
+};
+
+    document.addEventListener('DOMContentLoaded', () => {
+  // Add event listener for sendOTPBtn button click
+  document.getElementById('sendOTPBtn').addEventListener('click', () => {
+    // Your code to send the OTP here
+    const toNumber = '+919361255475'; // Replace with the recipient's phone number
+    const otp = generateOTP(); // Generate a random OTP
+    sendOTP(toNumber, otp); // Send OTP via server-side proxy
+  });
+  
+});
+</script> -->
+</html>
